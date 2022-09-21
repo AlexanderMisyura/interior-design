@@ -1,0 +1,156 @@
+textarea {
+  resize: vertical;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  background-color: rgb(144 144 144 / 73%);
+}
+
+address {
+  margin-bottom: 2%;
+}
+
+a[href^='tel:'] {
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+.wider {
+  justify-content: space-around;
+}
+
+/* yandex maps */
+.save-proportion-5x8 {
+  height: 0;
+  width: 100%;
+  padding-bottom: 62.5%;
+  position: relative;
+}
+/* .save-proportion-5x8 > iframe, */
+.save-proportion-5x8 > .mapouter {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+/* navigation top and sidebar */
+.side-nav {
+  display: block;
+}
+.top-nav {
+  display: none;
+}
+
+@media screen and (min-width:1024px) {
+  .side-nav {
+    display: none;
+  }
+  .top-nav {
+    display: block;
+  }
+
+  .top-nav a {
+    transition: border .3s ease;
+  }
+
+  .top-nav a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+  }
+  .top-nav a.active-page {
+    color: #b8b8b8 !important;;
+  }
+  .top-nav a:hover {
+    color: #21b2a6 !important;
+  }
+}
+
+
+/*
+=============== 
+GALLERY
+===============
+*/
+
+.design-selector {
+  background-color: rgb(144 144 144 / 62%);
+}
+
+.gallery-image:hover,
+.gallery-image:focus {
+  cursor: pointer;
+}
+@media screen and (min-width:1024px) {
+  .gallery-image:hover,
+  .gallery-image:focus {
+    transform: scale(1.01);
+    box-shadow: 0px -1px 13px 1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px -1px 13px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 13px 1px rgba(0,0,0,0.75);
+  }
+  .gallery-image {
+    transition: .2s ease;
+  }
+}
+
+.save-proportion {
+  height: 0;
+  padding-bottom: 80%;
+
+  background-size: cover;
+  background-position: center;
+}
+.save-proportion > img {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+}
+/*
+=============== 
+gallery modal
+===============
+*/
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+.modal {
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.795);
+  transition: all 0.3s linear;
+  opacity: 0;
+  overflow: scroll;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal.open {
+  opacity: 1;
+  z-index: 9999999;
+}
+
+.modal-content {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95vw;
+  height: 95vh;
+}
+
+.main-img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.25rem;
+}
