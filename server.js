@@ -1,0 +1,20 @@
+const express = require("express");
+const app = express();
+const exprHbs = require("express-handlebars").engine;
+
+app.engine(
+  ".hbs",
+  exprHbs({
+    defaultLayout: "main",
+    extname: ".hbs",
+  })
+);
+app.set("view engine", ".hbs");
+
+app.use(express.static("public"));
+app.use(express.static("img"));
+
+const PORT = process.env.PORT || 5000;
+
+app.get("/", (req, res) => res.render("index"));
+app.listen(PORT, console.log(`Server running on port ${PORT}`));
