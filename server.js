@@ -16,5 +16,5 @@ app.use(express.static("img"));
 
 const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => res.render("index"));
+app.get("/", (req, res) => res.render("index", { title: "Interior Design", headerClass: "alt" }));
 app.listen(PORT, console.log(`Server running on port ${PORT}`));
