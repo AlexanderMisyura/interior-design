@@ -94,7 +94,7 @@ class Gallery {
     };
     function fillContainerElem(list, category) {
       list.forEach(imageName => {
-        const path = `images/gallery/${category}/${imageName}`;
+        const path = `/gallery/${category}/${imageName}`;
         const divElem = document.createElement('div');
         divElem.classList.add('col-4', 'col-6-small', 'col-12-xsmall');
         container.appendChild(divElem);
