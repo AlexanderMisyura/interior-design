@@ -1,11 +1,11 @@
 <header id="header" class="{{headerClass}}">
   <h1><a href="/">interDesy</a></h1>
   <nav class="top-nav">
-    <ul>
-      <li><a class="active-page" href="/">home</a></li>
-      <li><a href="/gallery">gallery</a></li>
-      <li><a href="/contact">contact</a></li>
-      <li><a href="/about">about</a></li>
+    <ul>      
+      <li><a {{{activePageClass "/" routePath}}} href="/">home</a></li>
+      <li><a {{{activePageClass "/gallery" routePath}}} href="/gallery">gallery</a></li>
+      <li><a {{{activePageClass "/contact" routePath}}} href="/contact">contact</a></li>
+      <li><a {{{activePageClass "/about" routePath}}} href="/about">about</a></li>
     </ul>
   </nav>
   <nav id="nav" class="side-nav">

@@ -2,14 +2,21 @@ const express = require("express");
 const app = express();
 const exprHbs = require("express-handlebars").engine;
 
+const { activePageClass } = require("./helpers/hbs");
 app.engine(
   ".hbs",
   exprHbs({
     defaultLayout: "main",
     extname: ".hbs",
+    helpers: { activePageClass },
   })
 );
 app.set("view engine", ".hbs");
+
+app.use(function (req, res, next) {
+  res.locals.routePath = req.url;
+  next();
+});
 
 app.use(express.static("public"));
 app.use(express.static("img"));
