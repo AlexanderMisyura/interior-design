@@ -23,9 +23,9 @@ app.use(express.static("img"));
 
 const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => res.render("index", { title: "Interior Design", headerClass: "alt" }));
-app.get("/about", (req, res) => res.render("about", { title: "About us"}));
-app.get("/contact", (req, res) => res.render("contact", { title: "Contacts" }));
-app.get("/gallery", (req, res) => res.render("gallery", { title: "Gallery", galleryScriptSrc: "/js/gallery.js" }));
+app.get("/", (req, res) => res.render("index", { title: "Interdesy - Interior Design", headerClass: "alt" }));
+app.get("/about", (req, res) => res.render("about", { title: "About us | Interdesy"}));
+app.get("/contact", (req, res) => res.render("contact", { title: "Contact | Interdesy" }));
+app.get("/gallery", (req, res) => res.render("gallery", { title: "Gallery | Interdesy", galleryScriptSrc: "/js/gallery.js" }));
 
 app.listen(PORT, console.log(`Server running on port ${PORT}`));
