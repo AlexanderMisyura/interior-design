@@ -27,5 +27,6 @@ app.get("/", (req, res) => res.render("index", { title: "iDesy - Interior Design
 app.get("/about", (req, res) => res.render("about", { title: "About us | iDesy"}));
 app.get("/contact", (req, res) => res.render("contact", { title: "Contact | iDesy" }));
 app.get("/gallery", (req, res) => res.render("gallery", { title: "Gallery | iDesy", galleryScriptSrc: "/js/gallery.js" }));
+app.get("/credits", (req, res) => res.render("credits"));
 
 app.listen(PORT, console.log(`Server running on port ${PORT}`));
