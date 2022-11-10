@@ -11,15 +11,16 @@ There is a gallery of projects with the ability to filter by category. The feedb
 
 **Tech used:** HTML, CSS, JavaScript, Node, Express, Handlebars
 
-Implementation of [spectral](https://html5up.net/spectral) - [html5up](https://html5up.net) template.
-Built using Node.js, Express framework and Handlebars templating language.
+[Spectral](https://html5up.net/spectral) - [html5up](https://html5up.net) template implementation.
+Built with Express web framework and Handlebars view engine.
 
 ## Optimizations
 - Opt out of a third-party email service.
-- Add buttons for scrolling through enlarged images in the gallery.
-- Should use db for storing design projects (images and text content) => make a single page for each project.
-- Users should leave reviews.
+- Add ability to scroll through enlarged images in the gallery.
+- Should use db for storing design projects (images and text content)
+- Make a single page for each project.
+- Add opportunity for customers to leave feedback.
 
 ## Lessons Learned:
 
-Found several free services for sending email notifications with form data filled by the user. Should be great for building an MVP quickly, although not for production.
+Found several free services for sending email notifications with form data filled by the user. Suitable for building an MVP quickly, although not for production.
